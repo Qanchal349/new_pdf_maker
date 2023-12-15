@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PdfViewerActivity">
+
+    <!--    <include layout="@layout/pdf_view_tool_bar" />-->
+
+
+    <FrameLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.pdf_makerviewer.PdfRendererView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:pdfView_engine="internal"
+            app:pdfView_showDivider="false" />
+
+<!--&lt;!&ndash;        <ProgressBar&ndash;&gt;-->
+<!--        app:pdfView_divider="@drawable/divider"-->
+<!--            android:id="@+id/progressBar"-->
+<!--            style="?pdfView_progressBar"-->
+<!--            android:layout_width="2dp"-->
+<!--            android:layout_height="10dp"-->
+<!--            android:visibility="gone" />-->
+
+    </FrameLayout>
+</LinearLayout>

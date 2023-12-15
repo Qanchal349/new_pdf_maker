@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <files-path-->
+<!--        name="camera_photos"-->
+<!--        path="."/>-->
+
+    <files-path
+        name="camera_photos"
+        path="/"
+
+         />
+    <!--    <external-path name="camera_photos" path="Android/data/com.example.pdf_makerviewer/files/Pictures" />-->
+
+</paths>

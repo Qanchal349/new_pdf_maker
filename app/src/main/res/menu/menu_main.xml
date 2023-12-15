@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sort"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_baseline_sort_24"
+        android:title="sort by"
+        app:showAsAction="ifRoom"
+         />
+    <item
+        android:id="@+id/search"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"
+
+        />
+    <item
+        android:id="@+id/grid"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="200"
+        android:title="Grid Layout"
+        android:icon="@drawable/ic_baseline_grid_view_24"
+
+        />
+
+</menu>

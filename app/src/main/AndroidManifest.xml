@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pdf_makerviewer">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" /> <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/> -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_baseline_picture_as_pdf_24"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_baseline_picture_as_pdf_24"
+        android:supportsRtl="true">
+        <activity
+            android:name=".PdfViewerActivity"
+            android:theme="@style/MyThemeNoActionBar"
+            android:exported="true" />
+        <activity
+            android:name=".SelectImagesActivity"
+            android:exported="true"
+            android:theme="@style/MyThemeNoActionBar" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="true"
+            android:theme="@style/MyThemeNoActionBar" />
+        <activity
+            android:name=".BasicActivity"
+            android:exported="true"
+            android:theme="@style/MyThemeNoActionBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.pdf_makerviewer"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.pdf_makerviewer"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path2" />
+        </provider>
+    </application>
+
+</manifest>
